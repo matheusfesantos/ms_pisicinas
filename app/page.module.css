@@ -117,10 +117,54 @@
   color: white;
 }
 
+/* Gallery Section */
+.gallery {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f1faff;
+}
+
+.gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0077b6;
+}
+
+.galleryIntro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.galleryItem {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.galleryItem:hover {
+  transform: translateY(-10px);
+}
+
+.galleryImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 /* About Section */
 .about {
   padding: 80px 20px;
-  background-color: #f1faff;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -259,6 +303,10 @@
     padding-right: 0;
     margin-bottom: 40px;
   }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -267,6 +315,7 @@
   }
 
   .services h2,
+  .gallery h2,
   .about h2,
   .testimonials h2,
   .contactCta h2 {

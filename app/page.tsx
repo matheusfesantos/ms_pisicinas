@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import styles from "./page.module.css"
 
 export default function Home() {
@@ -44,6 +45,39 @@ export default function Home() {
         <div className={styles.viewMoreContainer}>
           <Link href="/servicos" className={styles.viewMoreButton}>
             Ver todos os serviços
+          </Link>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className={styles.gallery}>
+        <h2>Nosso Trabalho</h2>
+        <p className={styles.galleryIntro}>
+          Confira alguns exemplos de piscinas que mantemos com nossa equipe especializada
+        </p>
+        <div className={styles.galleryGrid}>
+          <div className={styles.galleryItem}>
+            <Image
+              src="/images/piscina1.png"
+              alt="Piscina Residencial com Deck"
+              width={600}
+              height={400}
+              className={styles.galleryImage}
+            />
+          </div>
+          <div className={styles.galleryItem}>
+            <Image
+              src="/images/piscina2.png"
+              alt="Limpeza de Piscina Interna"
+              width={600}
+              height={400}
+              className={styles.galleryImage}
+            />
+          </div>
+        </div>
+        <div className={styles.viewMoreContainer}>
+          <Link href="/projetos" className={styles.viewMoreButton}>
+            Ver mais projetos
           </Link>
         </div>
       </section>

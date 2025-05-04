@@ -1,4 +1,5 @@
 import styles from "./page.module.css"
+import Image from "next/image"
 
 export default function ServicosPage() {
   return (
@@ -21,7 +22,7 @@ export default function ServicosPage() {
         <div className={styles.servicesList}>
           <div className={styles.serviceItem}>
             <div className={styles.serviceImage}>
-              <img src="/placeholder.svg?height=400&width=600" alt="Tratamento de Piscinas" />
+              <Image src="/images/piscina1.png" alt="Tratamento de Piscinas" width={600} height={400} />
             </div>
             <div className={styles.serviceInfo}>
               <h3>Tratamento de Piscinas</h3>
@@ -53,7 +54,7 @@ export default function ServicosPage() {
               </ul>
             </div>
             <div className={styles.serviceImage}>
-              <img src="/placeholder.svg?height=400&width=600" alt="Manutenção de Piscinas" />
+              <Image src="/images/piscina2.png" alt="Manutenção de Piscinas" width={600} height={400} />
             </div>
           </div>
 
@@ -73,10 +74,6 @@ export default function ServicosPage() {
                 <li>Consultoria na escolha de equipamentos</li>
               </ul>
             </div>
-          </div>
-
-          <div className={styles.serviceItem}>
-            <div className={styles.serviceInfo}></div>
           </div>
         </div>
 
