@@ -82,6 +82,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section className={styles.partners}>
+        <h2>Nossos Parceiros</h2>
+        <p className={styles.partnersIntro}>
+          Trabalhamos com as melhores marcas do mercado para garantir a qualidade dos nossos serviços
+        </p>
+        <div className={styles.partnersGrid}>
+          <div className={styles.partnerItem}>
+            <Image
+              src="/images/evoclor-logo.png"
+              alt="Evoclor - Parceiro MS Piscinas"
+              width={300}
+              height={300}
+              className={styles.partnerLogo}
+            />
+          </div>
+          <div className={styles.partnerItem}>
+            <Image
+              src="/images/h2o-logo.png"
+              alt="H2O Geradores de Cloro - Parceiro MS Piscinas"
+              width={300}
+              height={300}
+              className={styles.partnerLogo}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className={styles.about}>
         <div className={styles.aboutContent}>

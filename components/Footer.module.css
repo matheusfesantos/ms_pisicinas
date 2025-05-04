@@ -69,6 +69,18 @@
   text-decoration: underline;
 }
 
+.partnerLogos {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.partnerLogos img {
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px;
+}
+
 .footerBottom {
   text-align: center;
   padding-top: 20px;
@@ -78,5 +90,9 @@
 @media (max-width: 768px) {
   .footerContent {
     grid-template-columns: 1fr;
+  }
+
+  .partnerLogos {
+    justify-content: flex-start;
   }
 }

@@ -161,6 +161,53 @@
   object-fit: cover;
 }
 
+/* Partners Section */
+.partners {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.partners h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0077b6;
+}
+
+.partnersIntro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.partnersGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.partnerItem {
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  max-width: 300px;
+}
+
+.partnerItem:hover {
+  transform: scale(1.05);
+}
+
+.partnerLogo {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+}
+
 /* About Section */
 .about {
   padding: 80px 20px;
@@ -307,6 +354,10 @@
   .galleryGrid {
     grid-template-columns: 1fr;
   }
+
+  .partnersGrid {
+    gap: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -316,6 +367,7 @@
 
   .services h2,
   .gallery h2,
+  .partners h2,
   .about h2,
   .testimonials h2,
   .contactCta h2 {

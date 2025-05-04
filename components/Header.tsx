@@ -55,6 +55,11 @@ export default function Header() {
               </Link>
             </li>
             <li className={styles.navItem}>
+              <Link href="/parceiros" onClick={() => setIsMenuOpen(false)}>
+                Parceiros
+              </Link>
+            </li>
+            <li className={styles.navItem}>
               <Link href="/contato" onClick={() => setIsMenuOpen(false)}>
                 Contato
               </Link>

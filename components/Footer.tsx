@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import styles from "./Footer.module.css"
 
 export default function Footer() {
@@ -64,8 +65,10 @@ export default function Footer() {
 
           <div className={styles.footerSection}>
             <h3>Nossos Parceiros</h3>
-            <p>Evoclor</p>
-            <p>H2O Gerador de Cloro</p>
+            <div className={styles.partnerLogos}>
+              <Image src="/images/evoclor-logo.png" alt="Evoclor" width={100} height={100} />
+              <Image src="/images/h2o-logo.png" alt="H2O Geradores de Cloro" width={100} height={100} />
+            </div>
           </div>
         </div>
 
