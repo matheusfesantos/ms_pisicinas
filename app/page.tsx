@@ -10,7 +10,8 @@ export default function Home() {
         <div className={styles.heroContent}>
           <h1>MS PISCINAS</h1>
           <p>Mais de 8 anos de experiência em tratamento e manutenção de piscinas</p>
-          <Link href="/contato" className={styles.ctaButton}>
+          <Link href="https://api.whatsapp.com/send/?phone=5519982589177&text&type=phone_number&app_absent=0"
+          target="blank" className={styles.ctaButton}>
             Solicite um orçamento
           </Link>
         </div>
@@ -23,7 +24,7 @@ export default function Home() {
           <div className={styles.serviceCard}>
             <div className={styles.serviceImageContainer}>
               <Image
-                src="/images/piscina1.png"
+                src="/images/serviços/agua-tratada.png"
                 alt="Tratamento de Piscinas"
                 width={600}
                 height={400}
@@ -36,7 +37,7 @@ export default function Home() {
           <div className={styles.serviceCard}>
             <div className={styles.serviceImageContainer}>
               <Image
-                src="/images/piscina2.png"
+                src="/images/serviços/manutenção-de-pisicina.png"
                 alt="Manutenção"
                 width={600}
                 height={400}
@@ -48,7 +49,13 @@ export default function Home() {
           </div>
           <div className={styles.serviceCard}>
             <div className={styles.serviceImageContainer}>
-              <img src="/placeholder.svg?height=400&width=600" alt="Equipamentos" className={styles.serviceImage} />
+            <Image
+                src="/images/serviços/equipamentos-de-pisicna.jpg"
+                alt="Manutenção"
+                width={600}
+                height={400}
+                className={styles.serviceImage}
+              />
             </div>
             <h3>Equipamentos de Qualidade</h3>
             <p>
@@ -56,11 +63,13 @@ export default function Home() {
             </p>
           </div>
         </div>
+        {/* 
         <div className={styles.viewMoreContainer}>
           <Link href="/servicos" className={styles.viewMoreButton}>
             Ver todos os serviços
           </Link>
         </div>
+        */}
       </section>
 
       {/* Partners Section */}
@@ -114,7 +123,8 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className={styles.testimonials}>
+      {/*
+       <section className={styles.testimonials}>
         <h2>O que nossos clientes dizem</h2>
         <div className={styles.testimonialSlider}>
           <div className={styles.testimonialTrack}>
@@ -141,12 +151,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Contact CTA Section */}
       <section className={styles.contactCta}>
         <h2>Pronto para transformar seu espaço?</h2>
         <p>Entre em contato conosco para um orçamento gratuito</p>
-        <Link href="/contato" className={styles.ctaButton}>
+        <Link href="https://api.whatsapp.com/send/?phone=5519982589177&text&type=phone_number&app_absent=0" 
+        target="blank" className={styles.ctaButton}>
           Fale Conosco
         </Link>
       </section>

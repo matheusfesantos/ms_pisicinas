@@ -6,8 +6,8 @@
 
 /* Hero Section */
 .hero {
-  height: 80vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/banner-piscina.png");
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/banner/novo-banner.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -18,6 +18,7 @@
 }
 
 .heroContent {
+  font-weight: bold;
   max-width: 800px;
   padding: 0 20px;
 }

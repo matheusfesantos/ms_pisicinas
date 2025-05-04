@@ -22,9 +22,6 @@ export default function SobrePage() {
               em perfeitas condições.
             </p>
           </div>
-          <div className={styles.aboutImage}>
-            <img src="/placeholder.svg?height=400&width=600" alt="História da MS PISCINAS" />
-          </div>
         </div>
 
         <div className={styles.missionSection}>
@@ -53,40 +50,6 @@ export default function SobrePage() {
                 <li>Capacitação contínua da equipe</li>
                 <li>Foco na satisfação do cliente</li>
               </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.teamSection}>
-          <h2>Nossa Equipe</h2>
-          <p className={styles.teamIntro}>
-            Contamos com profissionais altamente qualificados e experientes, comprometidos em oferecer o melhor serviço
-            para nossos clientes.
-          </p>
-          <div className={styles.teamGrid}>
-            <div className={styles.teamMember}>
-              <img
-                src="/placeholder.svg?height=300&width=300"
-                alt="Rosival Gomes dos Santos"
-                className={styles.teamImage}
-              />
-              <h3>Rosival Gomes dos Santos</h3>
-              <p>Fundador e Diretor</p>
-            </div>
-            <div className={styles.teamMember}>
-              <img src="/placeholder.svg?height=300&width=300" alt="Membro da Equipe" className={styles.teamImage} />
-              <h3>Ana Silva</h3>
-              <p>Gerente de Projetos</p>
-            </div>
-            <div className={styles.teamMember}>
-              <img src="/placeholder.svg?height=300&width=300" alt="Membro da Equipe" className={styles.teamImage} />
-              <h3>Roberto Santos</h3>
-              <p>Especialista em Construção</p>
-            </div>
-            <div className={styles.teamMember}>
-              <img src="/placeholder.svg?height=300&width=300" alt="Membro da Equipe" className={styles.teamImage} />
-              <h3>Juliana Costa</h3>
-              <p>Especialista em Manutenção</p>
             </div>
           </div>
         </div>
