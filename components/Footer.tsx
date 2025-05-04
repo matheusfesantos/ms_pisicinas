@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import styles from "./Footer.module.css"
 
 export default function Footer() {
@@ -23,19 +24,22 @@ export default function Footer() {
               <li>
                 <Link href="/servicos">Serviços</Link>
               </li>
+              {/* 
               <li>
                 <Link href="/projetos">Projetos</Link>
               </li>
+
               <li>
                 <Link href="/contato">Contato</Link>
               </li>
+              */}
             </ul>
           </div>
 
           <div className={styles.footerSection}>
             <h3>Contato</h3>
             <address className={styles.contactInfo}>
-              <p>São Paulo, SP</p>
+              <p>Limeira, SP</p>
               <p>
                 WhatsApp:{" "}
                 <a
@@ -60,12 +64,6 @@ export default function Footer() {
             <p>Segunda a Sexta: 8h às 18h</p>
             <p>Sábado: 8h às 12h</p>
             <p>Domingo: Fechado</p>
-          </div>
-
-          <div className={styles.footerSection}>
-            <h3>Nossos Parceiros</h3>
-            <p>Evoclor</p>
-            <p>H2O Gerador de Cloro</p>
           </div>
         </div>
 

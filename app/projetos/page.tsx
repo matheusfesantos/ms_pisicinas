@@ -1,4 +1,5 @@
 import styles from "./page.module.css"
+import Image from "next/image"
 
 export default function ProjetosPage() {
   return (
@@ -11,34 +12,34 @@ export default function ProjetosPage() {
         <div className={styles.intro}>
           <h2>Galeria de Projetos</h2>
           <p>
-            Conheça alguns dos nossos projetos realizados. Cada piscina é única e personalizada de acordo com as
-            necessidades e desejos de nossos clientes.
+            Conheça alguns dos nossos projetos realizados. Cada piscina recebe tratamento personalizado de acordo com as
+            necessidades específicas de nossos clientes.
           </p>
         </div>
 
         <div className={styles.projectGrid}>
           <div className={styles.projectCard}>
             <div className={styles.projectImage}>
-              <img src="/placeholder.svg?height=400&width=600" alt="Projeto Residencial" />
+              <Image src="/images/piscina1.png" alt="Piscina Residencial com Deck" width={600} height={400} />
             </div>
             <div className={styles.projectInfo}>
-              <h3>Piscina Residencial - Alphaville</h3>
+              <h3>Piscina Residencial com Deck</h3>
               <p>
-                Piscina de borda infinita com 50m² em residência de alto padrão. Revestimento em pastilhas de vidro azul
-                e sistema de aquecimento solar.
+                Tratamento e manutenção de piscina residencial com revestimento em azulejos azuis e deck em madeira.
+                Serviço completo de limpeza e tratamento químico da água.
               </p>
             </div>
           </div>
 
           <div className={styles.projectCard}>
             <div className={styles.projectImage}>
-              <img src="/placeholder.svg?height=400&width=600" alt="Projeto Condomínio" />
+              <Image src="/images/piscina2.png" alt="Limpeza de Piscina Interna" width={600} height={400} />
             </div>
             <div className={styles.projectInfo}>
-              <h3>Piscina para Condomínio - São Paulo</h3>
+              <h3>Manutenção de Piscina Interna</h3>
               <p>
-                Piscina semi-olímpica com 250m² para área de lazer de condomínio. Inclui sistema de tratamento
-                automatizado e iluminação LED.
+                Serviço de limpeza e aspiração de piscina em área interna. Tratamento completo da água e manutenção
+                preventiva dos equipamentos.
               </p>
             </div>
           </div>
