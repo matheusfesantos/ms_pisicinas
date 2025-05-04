@@ -4,7 +4,7 @@
 
 .hero {
   height: 40vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/placeholder.svg?height=600&width=1200");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/banner-piscina.png");
   background-size: cover;
   background-position: center;
   display: flex;

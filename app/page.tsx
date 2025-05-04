@@ -21,21 +21,35 @@ export default function Home() {
         <h2>Nossos Serviços</h2>
         <div className={styles.serviceGrid}>
           <div className={styles.serviceCard}>
-            <img
-              src="/placeholder.svg?height=200&width=300"
-              alt="Tratamento de Piscinas"
-              className={styles.serviceImage}
-            />
+            <div className={styles.serviceImageContainer}>
+              <Image
+                src="/images/piscina1.png"
+                alt="Tratamento de Piscinas"
+                width={600}
+                height={400}
+                className={styles.serviceImage}
+              />
+            </div>
             <h3>Tratamento de Piscinas</h3>
             <p>Tratamentos semanais com até duas visitas por semana para garantir a qualidade e segurança da água.</p>
           </div>
           <div className={styles.serviceCard}>
-            <img src="/placeholder.svg?height=200&width=300" alt="Manutenção" className={styles.serviceImage} />
+            <div className={styles.serviceImageContainer}>
+              <Image
+                src="/images/piscina2.png"
+                alt="Manutenção"
+                width={600}
+                height={400}
+                className={styles.serviceImage}
+              />
+            </div>
             <h3>Manutenção</h3>
             <p>Serviços completos de manutenção para preservar a durabilidade e o bom estado da sua piscina.</p>
           </div>
           <div className={styles.serviceCard}>
-            <img src="/placeholder.svg?height=200&width=300" alt="Equipamentos" className={styles.serviceImage} />
+            <div className={styles.serviceImageContainer}>
+              <img src="/placeholder.svg?height=400&width=600" alt="Equipamentos" className={styles.serviceImage} />
+            </div>
             <h3>Equipamentos de Qualidade</h3>
             <p>
               Utilizamos equipamentos de ponta e produtos de parceiros confiáveis como Evoclor e H2O Gerador de Cloro.
@@ -45,39 +59,6 @@ export default function Home() {
         <div className={styles.viewMoreContainer}>
           <Link href="/servicos" className={styles.viewMoreButton}>
             Ver todos os serviços
-          </Link>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className={styles.gallery}>
-        <h2>Nosso Trabalho</h2>
-        <p className={styles.galleryIntro}>
-          Confira alguns exemplos de piscinas que mantemos com nossa equipe especializada
-        </p>
-        <div className={styles.galleryGrid}>
-          <div className={styles.galleryItem}>
-            <Image
-              src="/images/piscina1.png"
-              alt="Piscina Residencial com Deck"
-              width={600}
-              height={400}
-              className={styles.galleryImage}
-            />
-          </div>
-          <div className={styles.galleryItem}>
-            <Image
-              src="/images/piscina2.png"
-              alt="Limpeza de Piscina Interna"
-              width={600}
-              height={400}
-              className={styles.galleryImage}
-            />
-          </div>
-        </div>
-        <div className={styles.viewMoreContainer}>
-          <Link href="/projetos" className={styles.viewMoreButton}>
-            Ver mais projetos
           </Link>
         </div>
       </section>
@@ -135,18 +116,28 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className={styles.testimonials}>
         <h2>O que nossos clientes dizem</h2>
-        <div className={styles.testimonialGrid}>
-          <div className={styles.testimonialCard}>
-            <p>"Serviço de excelente qualidade. Minha piscina ficou exatamente como eu imaginava!"</p>
-            <h4>Carlos Silva</h4>
-          </div>
-          <div className={styles.testimonialCard}>
-            <p>"Profissionais pontuais e atenciosos. Recomendo fortemente os serviços da MS PISCINAS."</p>
-            <h4>Ana Oliveira</h4>
-          </div>
-          <div className={styles.testimonialCard}>
-            <p>"A manutenção mensal tem mantido minha piscina impecável. Ótimo custo-benefício!"</p>
-            <h4>Roberto Santos</h4>
+        <div className={styles.testimonialSlider}>
+          <div className={styles.testimonialTrack}>
+            <div className={styles.testimonialCard}>
+              <p>"Serviço de excelente qualidade. Minha piscina ficou exatamente como eu imaginava!"</p>
+              <h4>Carlos Silva</h4>
+            </div>
+            <div className={styles.testimonialCard}>
+              <p>"Profissionais pontuais e atenciosos. Recomendo fortemente os serviços da MS PISCINAS."</p>
+              <h4>Ana Oliveira</h4>
+            </div>
+            <div className={styles.testimonialCard}>
+              <p>"A manutenção mensal tem mantido minha piscina impecável. Ótimo custo-benefício!"</p>
+              <h4>Roberto Santos</h4>
+            </div>
+            <div className={styles.testimonialCard}>
+              <p>"Desde que contratei a MS PISCINAS, nunca mais tive problemas com a água da minha piscina."</p>
+              <h4>Juliana Costa</h4>
+            </div>
+            <div className={styles.testimonialCard}>
+              <p>"Equipe muito profissional e produtos de alta qualidade. Recomendo a todos!"</p>
+              <h4>Pedro Almeida</h4>
+            </div>
           </div>
         </div>
       </section>

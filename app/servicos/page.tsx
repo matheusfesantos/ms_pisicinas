@@ -60,7 +60,7 @@ export default function ServicosPage() {
 
           <div className={styles.serviceItem}>
             <div className={styles.serviceImage}>
-              <img src="/placeholder.svg?height=400&width=600" alt="Produtos e Equipamentos" />
+              <Image src="/images/banner-piscina.png" alt="Produtos e Equipamentos" width={600} height={400} />
             </div>
             <div className={styles.serviceInfo}>
               <h3>Produtos e Equipamentos</h3>

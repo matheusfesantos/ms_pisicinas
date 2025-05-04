@@ -7,7 +7,7 @@
 /* Hero Section */
 .hero {
   height: 80vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/placeholder.svg?height=800&width=1200");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/banner-piscina.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -73,16 +73,30 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .serviceCard:hover {
   transform: translateY(-10px);
 }
 
+.serviceImageContainer {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
 .serviceImage {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.serviceCard:hover .serviceImage {
+  transform: scale(1.05);
 }
 
 .serviceCard h3 {
@@ -94,6 +108,7 @@
 .serviceCard p {
   padding: 0 20px 20px;
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 .viewMoreContainer {
@@ -117,55 +132,11 @@
   color: white;
 }
 
-/* Gallery Section */
-.gallery {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #f1faff;
-}
-
-.gallery h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #0077b6;
-}
-
-.galleryIntro {
-  max-width: 800px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-}
-
-.galleryGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto 40px;
-}
-
-.galleryItem {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.galleryItem:hover {
-  transform: translateY(-10px);
-}
-
-.galleryImage {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
 /* Partners Section */
 .partners {
   padding: 80px 20px;
   text-align: center;
-  background-color: white;
+  background-color: #f1faff;
 }
 
 .partners h2 {
@@ -276,12 +247,34 @@
   color: #0077b6;
 }
 
-.testimonialGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+.testimonialSlider {
   max-width: 1200px;
   margin: 0 auto;
+  overflow-x: auto;
+  padding: 20px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #0077b6 #f1f1f1;
+}
+
+.testimonialSlider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.testimonialSlider::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.testimonialSlider::-webkit-scrollbar-thumb {
+  background: #0077b6;
+  border-radius: 10px;
+}
+
+.testimonialTrack {
+  display: flex;
+  gap: 30px;
+  min-width: max-content;
 }
 
 .testimonialCard {
@@ -289,6 +282,9 @@
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  max-width: 350px;
+  text-align: left;
 }
 
 .testimonialCard p {
@@ -351,10 +347,6 @@
     margin-bottom: 40px;
   }
 
-  .galleryGrid {
-    grid-template-columns: 1fr;
-  }
-
   .partnersGrid {
     gap: 30px;
   }
@@ -366,7 +358,6 @@
   }
 
   .services h2,
-  .gallery h2,
   .partners h2,
   .about h2,
   .testimonials h2,
