@@ -1,0 +1,275 @@
+.main {
+  width: 100%;
+  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/placeholder.svg?height=800&width=1200");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: #0077b6;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.ctaButton:hover {
+  background-color: #023e8a;
+}
+
+/* Services Section */
+.services {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #0077b6;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+}
+
+.serviceImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  margin: 20px 0 10px;
+  color: #0077b6;
+}
+
+.serviceCard p {
+  padding: 0 20px 20px;
+  line-height: 1.6;
+}
+
+.viewMoreContainer {
+  margin-top: 40px;
+}
+
+.viewMoreButton {
+  display: inline-block;
+  background-color: transparent;
+  color: #0077b6;
+  border: 2px solid #0077b6;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.viewMoreButton:hover {
+  background-color: #0077b6;
+  color: white;
+}
+
+/* About Section */
+.about {
+  padding: 80px 20px;
+  background-color: #f1faff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aboutContent {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 40px;
+}
+
+.aboutContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0077b6;
+}
+
+.aboutContent p {
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.learnMoreButton {
+  display: inline-block;
+  background-color: #0077b6;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.learnMoreButton:hover {
+  background-color: #023e8a;
+}
+
+.aboutImage {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.aboutImage img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #0077b6;
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonialCard {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialCard p {
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonialCard h4 {
+  color: #0077b6;
+  font-weight: 600;
+}
+
+/* Contact CTA Section */
+.contactCta {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #0077b6;
+  color: white;
+}
+
+.contactCta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contactCta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactCta .ctaButton {
+  background-color: white;
+  color: #0077b6;
+}
+
+.contactCta .ctaButton:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .aboutContent {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .services h2,
+  .about h2,
+  .testimonials h2,
+  .contactCta h2 {
+    font-size: 2rem;
+  }
+}
