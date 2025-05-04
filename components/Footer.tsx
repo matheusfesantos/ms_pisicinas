@@ -13,30 +13,6 @@ export default function Footer() {
           </div>
 
           <div className={styles.footerSection}>
-            <h3>Links Rápidos</h3>
-            <ul className={styles.footerLinks}>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/sobre">Sobre</Link>
-              </li>
-              <li>
-                <Link href="/servicos">Serviços</Link>
-              </li>
-              {/* 
-              <li>
-                <Link href="/projetos">Projetos</Link>
-              </li>
-
-              <li>
-                <Link href="/contato">Contato</Link>
-              </li>
-              */}
-            </ul>
-          </div>
-
-          <div className={styles.footerSection}>
             <h3>Contato</h3>
             <address className={styles.contactInfo}>
               <p>Limeira, SP</p>
