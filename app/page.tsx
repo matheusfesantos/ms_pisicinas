@@ -118,7 +118,7 @@ export default function Home() {
           </Link>
         </div>
         <div className={styles.aboutImage}>
-          <img src="/placeholder.svg?height=400&width=500" alt="Equipe MS PISCINAS" />
+          <img src="/images/serviços/piscineiro.jpg" alt="Piscineiro MS Piscineiro" />
         </div>
       </section>
 
