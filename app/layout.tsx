@@ -2,7 +2,7 @@ import type React from "react"
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import { Analytics } from "@vercel/analytics/react" // ✅ IMPORTADO AQUI
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
