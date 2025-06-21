@@ -9,7 +9,9 @@ export const metadata: Metadata = {
   title: "MS PISCINAS - Especialistas em Construção e Manutenção de Piscinas",
   description:
     "MS PISCINAS oferece serviços de construção, manutenção e reforma de piscinas com qualidade e excelência.",
-  generator: "v0.dev",
+  icons: {
+    icon: "/images/logo.png",
+  },
 }
 
 export default function RootLayout({
