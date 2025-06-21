@@ -8,7 +8,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1>MS PISCINAS</h1>
           <p>Mais de 8 anos de experiência em tratamento e manutenção de piscinas</p>
           <Link href="https://api.whatsapp.com/send/?phone=5519982589177&text&type=phone_number&app_absent=0"
           target="blank" className={styles.ctaButton}>
@@ -63,13 +62,11 @@ export default function Home() {
             </p>
           </div>
         </div>
-        {/* 
         <div className={styles.viewMoreContainer}>
           <Link href="/servicos" className={styles.viewMoreButton}>
             Ver todos os serviços
           </Link>
         </div>
-        */}
       </section>
 
       {/* Partners Section */}

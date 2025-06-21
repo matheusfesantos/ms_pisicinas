@@ -12,84 +12,90 @@ export default function ProjetosPage() {
         <div className={styles.intro}>
           <h2>Galeria de Projetos</h2>
           <p>
-            Conheça alguns dos nossos projetos realizados. Cada piscina recebe tratamento personalizado de acordo com as
-            necessidades específicas de nossos clientes.
+            Conheça alguns dos nossos projetos realizados. Cada piscina recebe
+            tratamento personalizado de acordo com as necessidades específicas
+            de nossos clientes.
           </p>
         </div>
 
         <div className={styles.projectGrid}>
+          {/* Projeto 1 - Piscina em Chácara */}
           <div className={styles.projectCard}>
             <div className={styles.projectImage}>
-              <Image src="/images/piscina1.png" alt="Piscina Residencial com Deck" width={600} height={400} />
+              <Image
+                src="/images/piscinas/piscina-chacara.jpeg"
+                alt="Piscina ampla em chácara com área de lazer"
+                width={600}
+                height={400}
+              />
             </div>
             <div className={styles.projectInfo}>
-              <h3>Piscina Residencial com Deck</h3>
+              <h3>Piscina em Chácara</h3>
               <p>
-                Tratamento e manutenção de piscina residencial com revestimento em azulejos azuis e deck em madeira.
-                Serviço completo de limpeza e tratamento químico da água.
+                Serviço completo de manutenção e limpeza para piscina ampla,
+                garantindo qualidade da água, controle de pH e remoção de
+                impurezas para um lazer sempre seguro e saudável.
               </p>
             </div>
           </div>
 
+          {/* Projeto 2 - Piscina Residencial com Cascata */}
           <div className={styles.projectCard}>
             <div className={styles.projectImage}>
-              <Image src="/images/piscina2.png" alt="Limpeza de Piscina Interna" width={600} height={400} />
+              <Image
+                src="/images/piscinas/piscina-condominio.jpeg"
+                alt="Piscina residencial com cascata em parede decorada"
+                width={600}
+                height={400}
+              />
             </div>
             <div className={styles.projectInfo}>
-              <h3>Manutenção de Piscina Interna</h3>
+              <h3>Piscina Residencial com Cascata</h3>
               <p>
-                Serviço de limpeza e aspiração de piscina em área interna. Tratamento completo da água e manutenção
-                preventiva dos equipamentos.
+                Manutenção especializada para piscinas compactas, com
+                monitoramento constante do equilíbrio químico e limpeza de
+                cascata para preservar a beleza e a saúde da água.
               </p>
             </div>
           </div>
 
+          {/* Projeto 3 - Piscina Compacta com Pastilhas Azuis */}
           <div className={styles.projectCard}>
             <div className={styles.projectImage}>
-              <img src="/placeholder.svg?height=400&width=600" alt="Projeto Reforma" />
+              <Image
+                src="/images/piscinas/piscina-edicula.jpeg"
+                alt="Piscina compacta com pastilhas escuras e acabamento refinado"
+                width={600}
+                height={400}
+              />
             </div>
             <div className={styles.projectInfo}>
-              <h3>Reforma de Piscina - Guarujá</h3>
+              <h3>Piscina Compacta com Design Moderno</h3>
               <p>
-                Reforma completa de piscina em casa de praia. Troca de revestimento, instalação de nova borda e
-                modernização do sistema de filtragem.
+                Tratamento especializado para piscinas com pastilhas, focando na
+                conservação das superfícies e na qualidade da água, com uso
+                controlado de produtos e técnicas de limpeza avançadas.
               </p>
             </div>
           </div>
 
+          {/* Projeto 4 - Piscina Personalizada com Degraus Internos */}
           <div className={styles.projectCard}>
             <div className={styles.projectImage}>
-              <img src="/placeholder.svg?height=400&width=600" alt="Projeto Hotel" />
+              <Image
+                src="/images/piscinas/piscina-quatroni.jpeg"
+                alt="Piscina com degraus internos em ambiente residencial sofisticado"
+                width={600}
+                height={400}
+              />
             </div>
             <div className={styles.projectInfo}>
-              <h3>Piscina para Hotel - Campos do Jordão</h3>
+              <h3>Piscina Personalizada com Degraus</h3>
               <p>
-                Piscina aquecida coberta com 120m² para hotel de luxo. Sistema de aquecimento a gás e tratamento
-                automatizado.
+                Serviços avançados de manutenção e tratamento de água para
+                piscinas de alto padrão, incluindo limpeza detalhada de degraus
+                e controle rigoroso dos níveis químicos.
               </p>
-            </div>
-          </div>
-
-          <div className={styles.projectCard}>
-            <div className={styles.projectImage}>
-              <img src="/placeholder.svg?height=400&width=600" alt="Projeto Infantil" />
-            </div>
-            <div className={styles.projectInfo}>
-              <h3>Piscina Infantil - Clube Recreativo</h3>
-              <p>
-                Piscina infantil com 80m² e profundidade variável. Revestimento antiderrapante e sistema de filtragem de
-                alta performance.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.projectCard}>
-            <div className={styles.projectImage}>
-              <img src="/placeholder.svg?height=400&width=600" alt="Projeto Spa" />
-            </div>
-            <div className={styles.projectInfo}>
-              <h3>Spa Integrado - Residência em Jundiaí</h3>
-              <p>Piscina com spa integrado e cascata. Sistema de hidromassagem e iluminação LED com controle remoto.</p>
             </div>
           </div>
         </div>
@@ -103,5 +109,5 @@ export default function ProjetosPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }

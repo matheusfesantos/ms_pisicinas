@@ -4,7 +4,7 @@
 
 .hero {
   height: 20vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/placeholder.svg?height=600&width=1200");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/banner/novo-banner.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -14,6 +14,7 @@
 }
 
 .hero h1 {
+  font-weight: bold;
   font-size: 3rem;
   text-align: center;
 }

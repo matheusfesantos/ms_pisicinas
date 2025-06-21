@@ -25,7 +25,9 @@ export default function Header() {
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
-          <div className={`${styles.menuIcon} ${isMenuOpen ? styles.open : ""}`}>
+          <div
+            className={`${styles.menuIcon} ${isMenuOpen ? styles.open : ""}`}
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -49,13 +51,11 @@ export default function Header() {
                 Serviços
               </Link>
             </li>
-            {/*
             <li className={styles.navItem}>
               <Link href="/projetos" onClick={() => setIsMenuOpen(false)}>
                 Projetos
               </Link>
             </li>
-            */}
             <li className={styles.navItem}>
               <Link href="/parceiros" onClick={() => setIsMenuOpen(false)}>
                 Parceiros
@@ -87,5 +87,5 @@ export default function Header() {
         </nav>
       </div>
     </header>
-  )
+  );
 }
