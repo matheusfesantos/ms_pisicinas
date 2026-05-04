@@ -1,0 +1,25 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#0c4a6e" opacity="0.1"/>
+  
+  <!-- Chat bubble -->
+  <path d="M 40 50 Q 40 30 60 30 L 140 30 Q 160 30 160 50 L 160 120 Q 160 140 140 140 L 80 140 L 60 160 L 70 140 L 60 140 Q 40 140 40 120 Z" 
+        fill="#2097a0" opacity="0.9"/>
+  
+  <!-- Water wave line 1 (top) -->
+  <path d="M 55 60 Q 65 55 75 60 T 95 60 T 115 60 T 135 60" 
+        stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Water wave line 2 (middle) -->
+  <path d="M 55 85 Q 65 80 75 85 T 95 85 T 115 85 T 135 85" 
+        stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Water wave line 3 (bottom) -->
+  <path d="M 55 110 Q 65 105 75 110 T 95 110 T 115 110 T 135 110" 
+        stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Dot indicator (typing) -->
+  <circle cx="65" cy="125" r="3" fill="#ffffff" opacity="0.8"/>
+  <circle cx="80" cy="125" r="3" fill="#ffffff" opacity="0.6"/>
+  <circle cx="95" cy="125" r="3" fill="#ffffff" opacity="0.4"/>
+</svg>

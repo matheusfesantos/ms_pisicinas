@@ -216,7 +216,13 @@ Aguardo retorno!`
         } items-center gap-2`}
         aria-label="Abrir chat"
       >
-        <MessageCircle className="w-6 h-6" />
+        <Image
+          src="/images/aquabot-logo.svg"
+          alt="AquaBot"
+          width={24}
+          height={24}
+          className="object-contain"
+        />
         <span className="hidden sm:inline font-medium">AquaBot</span>
       </button>
 
@@ -227,7 +233,7 @@ Aguardo retorno!`
           <div className="bg-primary p-4 flex items-center gap-3">
             <div className="relative w-10 h-10 rounded-full overflow-hidden bg-white/10 flex items-center justify-center">
               <Image
-                src="/images/aquatech-logo.png"
+                src="/images/aquabot-logo.svg"
                 alt="AquaBot"
                 width={32}
                 height={32}
