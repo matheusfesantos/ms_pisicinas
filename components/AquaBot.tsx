@@ -33,7 +33,6 @@ const QUESTIONS = [
       "Instalacao de gerador de cloro",
       "Recuperacao de agua da piscina",
       "Manutencao de equipamentos",
-      "Construcao de piscina",
       "Outro servico",
     ],
   },

@@ -38,8 +38,8 @@ export default function ParceirosPage() {
           <div className="space-y-16">
             {/* Evoclor */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="bg-secondary rounded-2xl p-12 flex items-center justify-center">
-                <div className="relative w-64 h-64">
+              <div className="bg-secondary rounded-3xl p-12 flex items-center justify-center overflow-hidden">
+                <div className="relative w-64 h-64 rounded-2xl overflow-hidden">
                   <Image
                     src="/images/evoclor-logo.png"
                     alt="Evoclor"
@@ -74,8 +74,8 @@ export default function ParceirosPage() {
                   Recomendamos e instalamos os geradores de cloro H2O para clientes que buscam reduzir custos com produtos quimicos e desejam uma solucao mais sustentavel para o tratamento da agua de suas piscinas.
                 </p>
               </div>
-              <div className="bg-secondary rounded-2xl p-12 flex items-center justify-center order-1 lg:order-2">
-                <div className="relative w-64 h-64">
+              <div className="bg-secondary rounded-3xl p-12 flex items-center justify-center order-1 lg:order-2 overflow-hidden">
+                <div className="relative w-64 h-64 rounded-2xl overflow-hidden">
                   <Image
                     src="/images/h2o-logo.png"
                     alt="H2O Geradores de Cloro"
@@ -88,8 +88,8 @@ export default function ParceirosPage() {
 
             {/* AquaTech Software */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="bg-secondary rounded-2xl p-12 flex items-center justify-center">
-                <div className="relative w-64 h-64">
+              <div className="bg-secondary rounded-3xl p-12 flex items-center justify-center overflow-hidden">
+                <div className="relative w-64 h-64 rounded-2xl overflow-hidden">
                   <Image
                     src="/images/aquatech-logo.png"
                     alt="AquaTech Software"
