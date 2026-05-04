@@ -2,6 +2,7 @@ import type React from "react"
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import AquaBot from "@/components/AquaBot"
 import { Analytics } from "@vercel/analytics/next"
 import type { Metadata, Viewport } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
@@ -43,6 +44,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <AquaBot />
         <Analytics />
       </body>
     </html>

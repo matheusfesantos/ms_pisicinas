@@ -257,7 +257,7 @@ export default function Home() {
                 description: "Sistemas inovadores de geracao de cloro a partir do sal.",
               },
               {
-                image: null,
+                image: "/images/aquatech-logo.png",
                 name: "AquaTech Software",
                 description: "Parceiro tecnologico para solucoes digitais.",
                 link: "https://www.aquatechsoftware.com.br/",

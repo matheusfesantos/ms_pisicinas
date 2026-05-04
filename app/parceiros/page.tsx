@@ -89,11 +89,13 @@ export default function ParceirosPage() {
             {/* AquaTech Software */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="bg-secondary rounded-2xl p-12 flex items-center justify-center">
-                <div className="text-center">
-                  <span className="text-4xl font-serif font-bold text-primary">
-                    AquaTech Software
-                  </span>
-                  <p className="text-muted-foreground mt-2">Parceiro tecnologico</p>
+                <div className="relative w-64 h-64">
+                  <Image
+                    src="/images/aquatech-logo.png"
+                    alt="AquaTech Software"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
               </div>
               <div>
