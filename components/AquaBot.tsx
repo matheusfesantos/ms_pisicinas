@@ -10,46 +10,42 @@ interface Message {
 }
 
 interface FormData {
+  nome: string
   servico: string
   cidade: string
-  horario: string
   tamanho: string
   estilo: string
+  horario: string
 }
 
 const QUESTIONS = [
   {
+    id: "nome",
+    question: "Ola! Sou o AquaBot, assistente virtual da MS Piscinas. Qual seu nome?",
+    options: [],
+    isTextInput: true,
+  },
+  {
     id: "servico",
-    question: "Ola! Sou o AquaBot, assistente virtual da MS Piscinas. O que voce precisa?",
+    question: "Prazer! Qual servico voce precisa?",
     options: [
-      "Tratamento de piscina",
+      "Tratamento de agua da piscina",
+      "Instalacao de gerador de cloro",
+      "Recuperacao de agua da piscina",
       "Manutencao de equipamentos",
       "Construcao de piscina",
-      "Reforma de piscina",
-      "Limpeza emergencial",
       "Outro servico",
     ],
   },
   {
     id: "cidade",
-    question: "Otimo! Em qual cidade voce mora?",
+    question: "Em qual cidade voce mora?",
     options: [
-      "Campinas - SP",
-      "Valinhos - SP",
-      "Vinhedo - SP",
-      "Indaiatuba - SP",
-      "Jundiai - SP",
+      "Limeira",
+      "Piracicaba",
+      "Campinas",
+      "Santa Barbara",
       "Outra cidade",
-    ],
-  },
-  {
-    id: "horario",
-    question: "Qual o melhor horario para atendimento?",
-    options: [
-      "Manha (8h - 12h)",
-      "Tarde (12h - 18h)",
-      "Qualquer horario",
-      "Somente finais de semana",
     ],
   },
   {
@@ -74,6 +70,16 @@ const QUESTIONS = [
       "Nao sei informar",
     ],
   },
+  {
+    id: "horario",
+    question: "Qual o melhor horario para atendimento?",
+    options: [
+      "Manha (8h - 12h)",
+      "Tarde (12h - 18h)",
+      "Qualquer horario",
+      "Somente finais de semana",
+    ],
+  },
 ]
 
 export default function AquaBot() {
@@ -83,12 +89,14 @@ export default function AquaBot() {
     { type: "bot", content: QUESTIONS[0].question },
   ])
   const [formData, setFormData] = useState<FormData>({
+    nome: "",
     servico: "",
     cidade: "",
-    horario: "",
     tamanho: "",
     estilo: "",
+    horario: "",
   })
+  const [textInput, setTextInput] = useState("")
   const [isComplete, setIsComplete] = useState(false)
 
   const handleOptionClick = (option: string) => {
@@ -102,6 +110,47 @@ export default function AquaBot() {
       ...prev,
       [currentQuestion.id]: option,
     }))
+
+    setTextInput("")
+
+    // Move to next step or complete
+    if (currentStep < QUESTIONS.length - 1) {
+      setTimeout(() => {
+        setMessages((prev) => [
+          ...prev,
+          { type: "bot", content: QUESTIONS[currentStep + 1].question },
+        ])
+        setCurrentStep((prev) => prev + 1)
+      }, 500)
+    } else {
+      setTimeout(() => {
+        setMessages((prev) => [
+          ...prev,
+          {
+            type: "bot",
+            content: "Perfeito! Preparei um resumo do seu atendimento. Clique no botao abaixo para enviar pelo WhatsApp.",
+          },
+        ])
+        setIsComplete(true)
+      }, 500)
+    }
+  }
+
+  const handleTextSubmit = () => {
+    if (!textInput.trim()) return
+
+    const currentQuestion = QUESTIONS[currentStep]
+    
+    // Add user message
+    setMessages((prev) => [...prev, { type: "user", content: textInput }])
+
+    // Update form data
+    setFormData((prev) => ({
+      ...prev,
+      [currentQuestion.id]: textInput,
+    }))
+
+    setTextInput("")
 
     // Move to next step or complete
     if (currentStep < QUESTIONS.length - 1) {
@@ -127,14 +176,14 @@ export default function AquaBot() {
   }
 
   const generateWhatsAppMessage = () => {
-    const message = `Ola! Vim pelo site da MS Piscinas.
+    const message = `Ola! Meu nome eh ${formData.nome}. Vim pelo site da MS Piscinas.
 
 *Resumo do atendimento:*
 - Servico: ${formData.servico}
 - Cidade: ${formData.cidade}
-- Horario preferido: ${formData.horario}
 - Tamanho da piscina: ${formData.tamanho}
 - Tipo da piscina: ${formData.estilo}
+- Horario preferido: ${formData.horario}
 
 Aguardo retorno!`
 
@@ -146,12 +195,14 @@ Aguardo retorno!`
     setCurrentStep(0)
     setMessages([{ type: "bot", content: QUESTIONS[0].question }])
     setFormData({
+      nome: "",
       servico: "",
       cidade: "",
-      horario: "",
       tamanho: "",
       estilo: "",
+      horario: "",
     })
+    setTextInput("")
     setIsComplete(false)
   }
 
@@ -222,16 +273,41 @@ Aguardo retorno!`
             {/* Options */}
             {!isComplete && (
               <div className="space-y-2">
-                {QUESTIONS[currentStep].options.map((option, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleOptionClick(option)}
-                    className="w-full text-left p-3 bg-card border border-border rounded-xl text-sm text-foreground hover:border-accent hover:bg-accent/5 transition-all flex items-center justify-between group"
-                  >
-                    <span>{option}</span>
-                    <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-accent transition-colors" />
-                  </button>
-                ))}
+                {QUESTIONS[currentStep].isTextInput ? (
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      value={textInput}
+                      onChange={(e) => setTextInput(e.target.value)}
+                      onKeyPress={(e) => {
+                        if (e.key === "Enter") {
+                          handleTextSubmit()
+                        }
+                      }}
+                      placeholder="Digite seu nome..."
+                      className="flex-1 px-3 py-2 bg-card border border-border rounded-xl text-sm text-foreground placeholder-muted-foreground focus:outline-none focus:border-accent transition-colors"
+                      autoFocus
+                    />
+                    <button
+                      onClick={handleTextSubmit}
+                      disabled={!textInput.trim()}
+                      className="px-3 py-2 bg-accent text-accent-foreground rounded-xl text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <Send className="w-4 h-4" />
+                    </button>
+                  </div>
+                ) : (
+                  QUESTIONS[currentStep].options.map((option, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleOptionClick(option)}
+                      className="w-full text-left p-3 bg-card border border-border rounded-xl text-sm text-foreground hover:border-accent hover:bg-accent/5 transition-all flex items-center justify-between group"
+                    >
+                      <span>{option}</span>
+                      <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-accent transition-colors" />
+                    </button>
+                  ))
+                )}
               </div>
             )}
 
@@ -244,6 +320,10 @@ Aguardo retorno!`
                   </h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li>
+                      <span className="text-foreground">Nome:</span>{" "}
+                      {formData.nome}
+                    </li>
+                    <li>
                       <span className="text-foreground">Servico:</span>{" "}
                       {formData.servico}
                     </li>
@@ -252,16 +332,16 @@ Aguardo retorno!`
                       {formData.cidade}
                     </li>
                     <li>
-                      <span className="text-foreground">Horario:</span>{" "}
-                      {formData.horario}
-                    </li>
-                    <li>
                       <span className="text-foreground">Tamanho:</span>{" "}
                       {formData.tamanho}
                     </li>
                     <li>
                       <span className="text-foreground">Tipo:</span>{" "}
                       {formData.estilo}
+                    </li>
+                    <li>
+                      <span className="text-foreground">Horario:</span>{" "}
+                      {formData.horario}
                     </li>
                   </ul>
                 </div>
